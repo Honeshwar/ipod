@@ -55,7 +55,19 @@ code {
   background-image: url('https://th.bing.com/th/id/OIP.iSu2RcCcdm78xbxNDJMJSgHaEo?w=264&h=180&c=7&r=0&o=5&pid=1.7');
   background-repeat: no-repeat;
   background-size: cover;
+  display:flex;
 }
+.ipod_app{
+  width:70%;
+  height: 100%;
+  background-color:white;
+}
+.ipod_app img{
+  width:90%;
+  height: 90%;
+}
+
+
 #buttons{
   width:80%;
   height: 40%;
@@ -119,10 +131,11 @@ code {
 }
 
 #menu{
-  width:60%;
+  width:50%;
   height: 100%;
   background-color: rgb(255, 255, 255);
-  border: .4px solid rgb(0, 0, 0);
+  border-right: 1px solid rgb(191, 186, 186);
+  padding-right:5px;
   display:flex;
   flex-direction: column;
   align-items:center;
@@ -140,18 +153,18 @@ code {
 }
 #menu label{
   font-size:1.4rem;
-  letter-spacing: 20px;
+  letter-spacing: 10px;
   font-weight:800;
-  color:gray;
-  border-bottom:1px solid rgb(3, 20, 80);
-  padding-bottom: 10px;
+  color:rgb(0, 0, 0);
+  border-bottom:3px solid rgb(3, 20, 80);
+  margin-bottom: 10px;
 }
 #menu li{
  background-color:lightgray;
  color:rgb(0, 0, 0);
  /* box-shadow:0 0 10px 1px gray; */
  text-align:center;
- padding:10px;
+ padding:5px;
   /* font-size:1rem; */
   /* letter-spacing: 10px; */
   font-weight:500;

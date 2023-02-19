@@ -1,16 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 export default function Buttons() {
-  const all = document.querySelectorAll('#menu li');
+  let all = null;
+ useEffect(()=>{
+   all = document.querySelectorAll('#menu li');
   console.log(all);
-  let count=0;
-  let Default=true;
-  if(Default){
     all[count].style.boxShadow="0 0 5px 1px black";
     all[count].style.backgroundColor="blue";
     all[count].style.color="white";
-    Default=false;
-  }
+ 
+ },[]);
+ let count=0;
   function goUpHandler(){
     count--;
     if(count<0){
