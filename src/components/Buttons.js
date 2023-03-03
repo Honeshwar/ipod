@@ -1,5 +1,5 @@
 import React, { createContext, useEffect,useState } from 'react';//ui(what user se on screen) library use to create ui ,views part of mvc pattern
-import {SETINDEX} from './Wallpaper'
+import {SET_INDEX,SET_OKAY,SET_MENU} from './Wallpaper'
 
 //custom hook
 function useButtonToMOveInMenu(initialValue,menuList){
@@ -66,9 +66,9 @@ setCount(nextIndex);   //re render component  after execute above thing ,if firs
     onClickDown
   }
 }
-export const context = createContext();
+// export const context = createContext();/
 export default function Buttons() {
-  
+  const [m, setM]=useState(true);
   const [menuList,setMenuList]=useState([]);
   
   //it always  run /execute after html render to dom
@@ -86,14 +86,14 @@ export default function Buttons() {
     <>
     {/* <Wallpaper count={move.count}/> */}
     {/* use wallpaper comp setstate to rerendder than comp */}
-      {SETINDEX(move.count)}
+      {SET_INDEX(move.count)}
     <div id='buttons'>
       
         <button onClick={move.onClickUp}>_Up_</button>
-        <button >Menu</button>
-        <button>Menu</button>
+        <button onClick={()=>{setM(false);SET_OKAY(false);}}>M</button>
+        <button onClick={()=>SET_OKAY(false)}>M</button>
         <button onClick={move.onClickDown}>Down</button>
-        <button >Okay</button>
+        <button onClick={()=>{setM(true);SET_OKAY(true);}}>Okay</button>
       
     </div>
    
